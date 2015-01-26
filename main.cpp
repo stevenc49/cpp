@@ -4,22 +4,22 @@
 
 using namespace std;
 
-struct btreenode {
+typedef struct btreenode {
 
     int data;
     struct btreenode* left;
     struct btreenode* right;
 
-};
+} node;
 
 int main() {
 
-    struct btreenode root;
+    node root;
     root.data = 2;
     root.left = 0;
     root.right = 0;
 
-    struct btreenode left;
+    node left;
     left.data = 1;
 
     //root.left = (struct btreenode) malloc(sizeof(left));
