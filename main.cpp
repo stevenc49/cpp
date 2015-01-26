@@ -21,10 +21,10 @@ int main() {
 
     node left;
     left.data = 1;
-    root.left = &left;      //read only
+    root.left = &left;      //on the stack
 
 
-    node* right = (node*) malloc(sizeof(node));     //dynamic
+    node* right = (node*) malloc(sizeof(node));     //on the heap
     root.right = (node*) right;
 
     cout << root.left << endl;
