@@ -25,10 +25,11 @@ int main() {
 
 
     node* right = (node*) malloc(sizeof(node));     //on the heap
+    right->data = 3;
     root.right = (node*) right;
 
-    cout << root.left << endl;
-    cout << root.right << endl;
+    cout << root.left->data << endl;
+    cout << root.right->data << endl;
 
     //cout << sizeof(struct btreenode) << endl;
 
