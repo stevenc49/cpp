@@ -21,12 +21,16 @@ int main() {
 
     node left;
     left.data = 1;
+    root.left = &left;      //read only
 
-    //root.left = (struct btreenode) malloc(sizeof(left));
-    root.left = &left;
+
+    node* right = (node*) malloc(sizeof(node));     //dynamic
+    root.right = (node*) right;
 
     cout << root.left << endl;
     cout << root.right << endl;
+
+    //cout << sizeof(struct btreenode) << endl;
 
     cin.get();
 
