@@ -12,7 +12,7 @@ typedef struct btreenode {
 
 } node;
 
-int main() {
+int _main() {
 
     node root;
     root.data = 2;
