@@ -26,28 +26,35 @@ node* insertLeft(node* root, int data) {
 
 int main() {
 
+    //create root
     node* root = (node*) malloc(sizeof(node));
     root->data = 2;
     root->left = 0;
     root->right = 0;
 
+    //create left
     node left;          //on the stack
     left.data = 1;
 
+    //create right
     node* right = (node*) malloc(sizeof(node));     //on the heap
     right->data = 3;
 
+    //attach left and right to root
     root->left = &left;
     root->right = (node*) right;
 
+    //print their values
     cout << root->left->data << endl;
     cout << root->right->data << endl;
 
-    //cout << sizeof(struct btreenode) << endl;
+    //insert using funtion - by reference
+    insertLeft(&left, 25);
+    cout << left.left->data << endl;
 
-
+    //insert using function - by pointer
     insertLeft(right, 50);
-    cout << root->right->left->data << endl;
+    cout << right->left->data << endl;
 
     cin.get();
 
