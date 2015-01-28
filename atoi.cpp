@@ -67,7 +67,7 @@ int myAtoi(char *str)
     return res;
 }
 
-int main() {
+int main_atoi() {
 
     char* str = "123";
     //const char* new_str = (const char*) str;
