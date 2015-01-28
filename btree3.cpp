@@ -24,7 +24,7 @@ node* insertLeft(node* root, int data) {
     root->left = newNode;
 };
 
-int main() {
+int main3() {
 
     //create root
     node* root = (node*) malloc(sizeof(node));
