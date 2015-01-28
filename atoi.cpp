@@ -36,15 +36,15 @@ int atoi(const char* str) {
         char ptr = str[i];
         //cout << ptr << endl;
 
-        int toAdd = (int) (ptr-'0' * multiplier);
-        cout << "toAdd" << toAdd << endl;
+        int toAdd = (int) (ptr-'0') * multiplier;
+        cout << "toAdd " << toAdd << endl;
         sum += toAdd;
 
         multiplier*=10;
-        cout << "mult" << multiplier<<endl;
+        cout << "mult " << multiplier<<endl;
     }
 
-    //cout << sum << endl;
+    cout << sum << endl;
 
     //char* end = str[size(new_str)];
 
@@ -58,6 +58,8 @@ int main() {
 
     //cout << size(new_str) << endl;
     atoi(str);
+
+    //cout << '1'-'0' << endl;
 
     cin.get();
 
