@@ -48,7 +48,7 @@ int main() {
     cout << root->left->data << endl;
     cout << root->right->data << endl;
 
-    //insert using funtion - by reference
+    //insert using function - by reference
     insertLeft(&left, 25);
     cout << left.left->data << endl;
 
