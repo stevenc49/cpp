@@ -51,13 +51,30 @@ int atoi(const char* str) {
 
 }
 
+int myAtoi(char *str)
+{
+    int res = 0; // Initialize result
+
+    // Iterate through all characters of input string and update result
+    for (int i = 0; str[i] != '\0'; ++i) {
+
+        cout<<res*10<<endl;
+        res = res*10 + str[i] - '0';
+    }
+
+
+    // return result.
+    return res;
+}
+
 int main() {
 
     char* str = "123";
     //const char* new_str = (const char*) str;
 
     //cout << size(new_str) << endl;
-    atoi(str);
+    //atoi(str);
+    cout << myAtoi("123");
 
     //cout << '1'-'0' << endl;
 
