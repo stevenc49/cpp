@@ -12,7 +12,7 @@ typedef struct btreenode {
 
 } node;
 
-int main() {
+int main2() {
 
     node* root = (node*) malloc(sizeof(node));
     root->data = 2;
