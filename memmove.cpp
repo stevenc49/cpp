@@ -24,7 +24,7 @@ void* myMemmove(char* dest, const char* src, int numBytes) {
     cout << sizeof(int) << endl;
 }
 
-int main() {
+int main_memmove() {
 
     char str[] = "memmove can be very useful......";
     //memmove(str+20,str+15,11);
@@ -42,7 +42,7 @@ int main() {
 
     cout << *b << endl;     //content pointerd to by b
 
-    //myMemmove(str+20,str+15,11);
+    //myMemmoveF:\dev\github\interview(str+20,str+15,11);
 
     //cout << strstr(str[15], 11);
 
