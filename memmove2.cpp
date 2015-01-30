@@ -6,15 +6,21 @@
 
 using namespace std;
 
-void* mymemmove2(void* dest, const void* src, int size) {
+/*
+*   this is a char* version, memmove should be void*
+*
+*   memmove can be very very very ve
+*   to fix: http://stackoverflow.com/a/3572519
+*/
+void* mymemmove2(char* dest, const char* src, int size) {
 
     //void* a = &src;
     //void* b = &dest;
 
-    for(int i=0; i<size; i++) {
+    for(int i=0; i<=size; i++) {
 
         //cout << *src << endl;
-        dest = (void*)src;
+        *dest = *src;
 
         src+=1;
         dest+=1;
@@ -26,7 +32,8 @@ int main() {
 
     char str[] = "memmove can be very useful......";
 
-    mymemmove2(&str[15],&str[20],5);
+    //memmove(&str[20],&str[15],11);
+    mymemmove2(&str[20],&str[15],11);
 
     cout << str << endl;
 
