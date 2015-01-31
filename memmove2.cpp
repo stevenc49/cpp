@@ -17,6 +17,26 @@ void* mymemmove2(char* dest, const char* src, int size) {
     //void* a = &src;
     //void* b = &dest;
 
+    if(src<dest) {
+        cout << "src<dest" << endl;
+
+        //put pointer at end of str+size
+        char* ptr = (char*)src + size - 1;
+        cout << *ptr << endl;;
+
+        //copy up to ptr+(dest-src)
+        char* ptr2 = ptr + (dest-src);
+        *ptr2 = *ptr;
+
+        for(int i=0; i<=size; i++) {
+            ptr2--;
+            ptr--;
+
+            *ptr2 = *ptr;
+        }
+    }
+
+    /*
     for(int i=0; i<=size; i++) {
 
         //cout << *src << endl;
@@ -25,15 +45,15 @@ void* mymemmove2(char* dest, const char* src, int size) {
         src+=1;
         dest+=1;
     }
-
+    */
 }
 
 int main() {
 
     char str[] = "memmove can be very useful......";
 
-    //memmove(&str[20],&str[15],11);
-    mymemmove2(&str[20],&str[15],11);
+    memmove(&str[20],&str[15],11);
+    //mymemmove2(&str[20],&str[15],11);
 
     cout << str << endl;
 
