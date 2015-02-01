@@ -47,7 +47,8 @@ void* mymemmove2(void* dest, const void* src, int size) {
     */
 }
 
-int main() {
+int main_memmove2
+() {
 
     char str[] = "memmove can be very useful......";
 
