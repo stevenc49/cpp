@@ -12,7 +12,7 @@ using namespace std;
 *   memmove can be very very very ve
 *   to fix: http://stackoverflow.com/a/3572519
 */
-void* mymemmove2(char* dest, const char* src, int size) {
+void* mymemmove2(void* dest, const void* src, int size) {
 
     //void* a = &src;
     //void* b = &dest;
@@ -25,7 +25,10 @@ void* mymemmove2(char* dest, const char* src, int size) {
         cout << *ptr << endl;;
 
         //copy up to ptr+(dest-src)
-        char* ptr2 = ptr + (dest-src);
+        //cout<< (char*)dest-(char*)src << endl;
+
+        char* ptr2 = ptr + ((char*)dest-(char*)src);
+
         *ptr2 = *ptr;
 
         for(int i=0; i<=size; i++) {
@@ -34,6 +37,7 @@ void* mymemmove2(char* dest, const char* src, int size) {
 
             *ptr2 = *ptr;
         }
+
     }
 
     /*
@@ -52,8 +56,8 @@ int main() {
 
     char str[] = "memmove can be very useful......";
 
-    memmove(&str[20],&str[15],11);
-    //mymemmove2(&str[20],&str[15],11);
+    //memmove(&str[20],&str[15],11);
+    mymemmove2(&str[20],&str[15],11);
 
     cout << str << endl;
 
