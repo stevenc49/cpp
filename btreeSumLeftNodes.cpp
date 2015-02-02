@@ -7,7 +7,7 @@ using namespace std;
 typedef struct node {
 
     int data;
-    node *left, *right;
+    node *left, *right = NULL;
 
 
 } Node;
@@ -31,9 +31,51 @@ bool isLeaf(Node* node) {
     return false;
 }
 
-int sumOfLeftLeaves(Node *node) {
+int leftLeavesSum(Node *root) {
 
+    int res = 0;
+
+    if(root != NULL) {
+
+        if(isLeaf(root->left)) {
+            res += root->left->data;
+        }
+        else {
+            res += leftLeavesSum(root->left);
+        }
+
+        res += leftLeavesSum(root->right);
+    }
+
+    return res;
 }
+
+/*
+int leftLeavesSum(Node *node) {
+
+    int res = 0;
+
+    cout << node->data << endl;
+
+
+    //child of leaf
+    if(node!=NULL) {
+
+        if(isLeaf(node)) {
+            return node->data;
+        }
+        else {
+            return leftLeavesSum(node->left) + leftLeavesSum(node->right);
+        }
+
+    }
+    else {
+        return 0;
+    }
+
+    return res;
+}
+*/
 
 int main() {
 
@@ -51,7 +93,7 @@ int main() {
     root->right->right = newNode(52);
     root->right->right->left = newNode(50);
 
-
+    cout << leftLeavesSum(root) << endl;
 
     return 0;
 
