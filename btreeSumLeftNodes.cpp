@@ -33,6 +33,7 @@ bool isLeaf(Node* node) {
     return false;
 }
 
+/*
 int leftLeavesSum(Node *root) {
 
     int res = 0;
@@ -51,33 +52,28 @@ int leftLeavesSum(Node *root) {
 
     return res;
 }
+*/
 
-/*
+
 int leftLeavesSum(Node *node) {
 
     int res = 0;
 
     cout << node->data << endl;
 
-
     //child of leaf
     if(node!=NULL) {
 
         if(isLeaf(node)) {
-            return node->data;
-        }
-        else {
-            return leftLeavesSum(node->left) + leftLeavesSum(node->right);
+            cout << node->data << " is leaf" << endl;
         }
 
-    }
-    else {
-        return 0;
+        leftLeavesSum(node->left);
+        leftLeavesSum(node->right);
     }
 
     return res;
 }
-*/
 
 int main() {
 
