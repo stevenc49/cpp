@@ -33,31 +33,78 @@ bool isLeaf(Node* node) {
     return false;
 }
 
-/*
-int leftLeavesSum(Node *root) {
 
-    int res = 0;
+//int leftLeavesSum(Node *root)
+//{
+//    // Initialize result
+//    int res = 0;
+//
+//    // Update result if root is not NULL
+//    if (root != NULL)
+//    {
+//       // If left of root is NULL, then add key of
+//       // left child
+//       if (isLeaf(root->left))
+//            res += root->left->data;
+//       else // Else recur for left child of root
+//            res += leftLeavesSum(root->left);
+//
+//       // Recur for right child of root and update res
+//       res += leftLeavesSum(root->right);
+//    }
+//
+//    // return result
+//    return res;
+//}
 
-    if(root != NULL) {
+//int leftLeavesSum(Node *node) {
+//
+//    static int res = 0;
+//
+//    //child of leaf
+//    if(node!=NULL) {
+//
+//        cout << node->data << endl;
+//
+//        if(isLeaf(node)) {
+//            cout << node->data << " is leaf" << endl;
+//        }
+//
+//        if(isLeaf(node->left)) {
+//            res += node->left->data;
+//        }
+//
+//        leftLeavesSum(node->left);
+//        leftLeavesSum(node->right);
+//    }
+//
+//    return res;
+//}
 
-        if(isLeaf(root->left)) {
-            res += root->left->data;
-        }
-        else {
-            res += leftLeavesSum(root->left);
-        }
 
-        res += leftLeavesSum(root->right);
-    }
-
-    return res;
-}
-*/
+//int leftLeavesSum(Node *root) {
+//
+//    int res = 0;
+//
+//    if(root != NULL) {
+//
+//        if(isLeaf(root->left)) {
+//            res += root->left->data;
+//        }
+//        else {
+//            res += leftLeavesSum(root->left);
+//        }
+//
+//        res += leftLeavesSum(root->right);
+//    }
+//
+//    return res;
+//}
 
 
 int leftLeavesSum(Node *node) {
 
-    static int res = 0;
+    int res = 0;
 
     //child of leaf
     if(node!=NULL) {
@@ -72,8 +119,8 @@ int leftLeavesSum(Node *node) {
             res += node->left->data;
         }
 
-        leftLeavesSum(node->left);
-        leftLeavesSum(node->right);
+        res += leftLeavesSum(node->left);
+        res += leftLeavesSum(node->right);
     }
 
     return res;
