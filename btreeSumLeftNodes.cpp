@@ -1,5 +1,6 @@
 /*
     http://www.geeksforgeeks.org/find-sum-left-leaves-given-binary-tree/
+    http://stackoverflow.com/questions/1316809/recursive-function-with-static-variable
 */
 
 #include <iostream>
@@ -105,7 +106,6 @@ bool isLeaf(Node* node) {
 //    return res;
 //}
 
-
 int leftLeavesSum(Node *node) {
 
     int res = 0;
@@ -130,7 +130,7 @@ int leftLeavesSum(Node *node) {
     return res;
 }
 
-int main() {
+int main_sumLeftTreeNodes() {
 
     //node* root = (node*) malloc(sizeof(node));
 

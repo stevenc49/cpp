@@ -35,8 +35,10 @@
 		<Unit filename="btree1.cpp" />
 		<Unit filename="btree2.cpp" />
 		<Unit filename="btree3.cpp" />
+		<Unit filename="btreeSumLeftNodes.cpp" />
 		<Unit filename="memmove.cpp" />
 		<Unit filename="memmove2.cpp" />
+		<Unit filename="sumDigitsRecursion.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
