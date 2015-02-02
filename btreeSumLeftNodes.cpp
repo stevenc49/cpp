@@ -20,6 +20,21 @@ Node *newNode(int data) {
     return root;
 }
 
+bool isLeaf(Node* node) {
+
+    if(node==NULL) {    //child of leaf
+        return false;
+    }
+    if(node->left==NULL && node->right==NULL) {
+        return true;
+    }
+    return false;
+}
+
+int sumOfLeftLeaves(Node *node) {
+
+}
+
 int main() {
 
     //node* root = (node*) malloc(sizeof(node));
@@ -35,6 +50,8 @@ int main() {
     root->right->left = newNode(23);
     root->right->right = newNode(52);
     root->right->right->left = newNode(50);
+
+
 
     return 0;
 
