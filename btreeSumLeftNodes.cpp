@@ -17,6 +17,8 @@ Node *newNode(int data) {
 
     node* root = (node*) malloc(sizeof(node));
     root->data = data;
+    root->left = NULL;
+    root->right = NULL;
     return root;
 }
 
