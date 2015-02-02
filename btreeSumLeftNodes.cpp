@@ -57,7 +57,7 @@ int leftLeavesSum(Node *root) {
 
 int leftLeavesSum(Node *node) {
 
-    int res = 0;
+    static int res = 0;
 
     //child of leaf
     if(node!=NULL) {
@@ -66,6 +66,10 @@ int leftLeavesSum(Node *node) {
 
         if(isLeaf(node)) {
             cout << node->data << " is leaf" << endl;
+        }
+
+        if(isLeaf(node->left)) {
+            res += node->left->data;
         }
 
         leftLeavesSum(node->left);
@@ -91,7 +95,7 @@ int main() {
     root->right->right = newNode(52);
     root->right->right->left = newNode(50);
 
-    cout << leftLeavesSum(root) << endl;
+    cout << endl << "left sum is " << leftLeavesSum(root) << endl;
 
     return 0;
 
