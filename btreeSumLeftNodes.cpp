@@ -1,3 +1,7 @@
+/*
+    http://www.geeksforgeeks.org/find-sum-left-leaves-given-binary-tree/
+*/
+
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
