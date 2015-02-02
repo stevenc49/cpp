@@ -59,10 +59,10 @@ int leftLeavesSum(Node *node) {
 
     int res = 0;
 
-    cout << node->data << endl;
-
     //child of leaf
     if(node!=NULL) {
+
+        cout << node->data << endl;
 
         if(isLeaf(node)) {
             cout << node->data << " is leaf" << endl;
