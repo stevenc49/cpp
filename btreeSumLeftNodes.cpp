@@ -106,6 +106,7 @@ bool isLeaf(Node* node) {
 //    return res;
 //}
 
+/*
 int leftLeavesSum(Node *node) {
 
     int res = 0;
@@ -129,8 +130,9 @@ int leftLeavesSum(Node *node) {
 
     return res;
 }
+*/
 
-int main_sumLeftTreeNodes() {
+int main() {
 
     //node* root = (node*) malloc(sizeof(node));
 

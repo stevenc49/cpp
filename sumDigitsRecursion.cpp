@@ -17,7 +17,8 @@ int sumDigits(char num[]) {
 
 }
 
-int main() {
+
+int main_sumDigitsRecursion() {
 
     char num[] = "123";
 

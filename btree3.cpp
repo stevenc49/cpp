@@ -24,6 +24,17 @@ node* insertLeft(node* root, int data) {
     root->left = newNode;
 };
 
+node* insertRight(node* root, int data) {
+
+    node* newNode = (node*) malloc(sizeof(node));
+    newNode->data = data;
+    newNode->left = 0;
+    newNode->right = 0;
+
+    cout << "inserting " << data << " to the right of node " << root->data << endl;
+    root->right = newNode;
+};
+
 int main3() {
 
     //create root
